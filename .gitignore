@@ -1,0 +1,3 @@
+app/sinatra/Gemfile.lock
+app/sinatra/.bundle/
+app/sinatra/vendor/
