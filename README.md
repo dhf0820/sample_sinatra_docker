@@ -2,11 +2,11 @@
 
 This is sample project for running a Sinatra application on Docker on top minimal Sinatra base image.
 
-###Step 1:
+####Step 1:
 
 Create your sinatra application in the app/sinatra folder. If you change the name you will have to modify the name in the Docker file and scripts (not a hard thing). Replace the current sample app with yours 
 
-###Step 2:
+####Step 2:
 
 Do any gems require native compile? You can check this just by building the Docker image from the app folder.  If no errors, you are great. Otherwise modify the apk lines in the app/scripts/bundle_it.sh as you can see postgresql dev development library was added in the example and add required libraries.
 
@@ -14,13 +14,13 @@ Do any gems require native compile? You can check this just by building the Dock
 
 Build the Docker image while in the app folder (not the sinatra folder): docker build -t app_name .
 
-###Step 4:
+####Step 4:
 
 Run container saving the container ID: export SINATRA=$(docker run -d -p 5678:5678 app_name)
 
 You can access it from your browser, http://localhost:5678/ (or the container ip)
 
-Sample Endpoints in this project:
+#####Sample Endpoints in this project:
 - `/`     A welcome message
 - `/disk` disk information via`df -h`
 - `/env`  Environment information.
